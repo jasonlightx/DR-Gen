@@ -14,8 +14,8 @@ def get_args_parser_pdf2text():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--type', default='TCGA_BRCA', type=str, help='name in TCGAs')
-    parser.add_argument('--root', default='/yanglin/GDC_DATA', type=str, help='path to TCGA')
-    parser.add_argument('--savepath', default='/chenpingyi/projects/WSI-GPT/ocr/datasets', type=str,
+    parser.add_argument('--root', default='', type=str, help='path to TCGA')
+    parser.add_argument('--savepath', default='', type=str,
                         help='path to wsi-text pairs')
     args, unparsed = parser.parse_known_args()
 

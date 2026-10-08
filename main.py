@@ -25,8 +25,8 @@ def parse_agrs():
     parser = argparse.ArgumentParser()
 
     # Data input settings
-    parser.add_argument('--image_dir', type=str, default='home/hp/code/xl/feat/outputs_OTUS_20x/extracted_features/pt_files', help='the path to the directory containing the encoded wsi patches using UNI.')
-    parser.add_argument('--ann_path', type=str, default='home/hp/code/xl/gt_report/TCGA-BRCA0/TCGA-BRCA', help='the path to the directory containing the data.')
+    parser.add_argument('--image_dir', type=str, default='', help='the path to the directory containing the encoded wsi patches using UNI.')
+    parser.add_argument('--ann_path', type=str, default='', help='the path to the directory containing the data.')
     parser.add_argument('--split_path', type=str, default='ocr/dataset_csv/splits_0.csv', help='the path to the directory containing the train/val/test splits.')
     parser.add_argument('--bank_path', type=str, default='memory_short.pt', help='the path to the directory containing the knowledge bank')
 
