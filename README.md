@@ -28,11 +28,9 @@ To download diagnostic WSIs (formatted as `.svs` files), please refer to the [NI
 
 To process WSIs, tissue regions are first segmented from downsampled slides. Non-overlapping `256 x 256` patches are then extracted from the tissue regions at `10x` magnification using [**CLAM**](https://github.com/mahmoodlab/CLAM). [**CONCH**](https://github.com/mahmoodlab/CONCH) is used to encode the raw image patches into 512-dimensional feature vectors, which are saved as a `.pt` file for each WSI.
 
-The feature directory should contain files whose names begin with their TCGA case IDs. The annotation directory should contain one folder per case, with the corresponding pathology report stored in a file named `annotation`.
-
 ## Running Experiments
 
-Experiments can be run using the following generic command lines. This codebase is developed based on [**BiGen**]([https://github.com/DeepMed-Lab-ECNU/BiGen]).
+Experiments can be run using the following generic command lines. This codebase is developed based on [**BiGen**](https://github.com/DeepMed-Lab-ECNU/BiGen).
 
 ### Training model
 
