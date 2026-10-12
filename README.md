@@ -32,18 +32,12 @@ The feature directory should contain files whose names begin with their TCGA cas
 
 ## Running Experiments
 
-Experiments can be run using the following generic command lines. This codebase is developed based on [**WsiCaption**](https://github.com/cpystan/Wsi-Caption).
+Experiments can be run using the following generic command lines. This codebase is developed based on [**BiGen**]([https://github.com/DeepMed-Lab-ECNU/BiGen]).
 
 ### Training model
 
 ```shell
-python main.py --mode 'Train' --n_gpu <GPUs to be used> --image_dir <CONCH FEATURE PATH> --ann_path <CAPTION PATH> --split_path <PATH TO TRAIN/VAL/TEST SPLIT CSV> --bank_path <KNOWLEDGE BANK PATH> --save_dir <SAVING CKPT PATH> --record_dir <SAVING RECORD PATH>
-```
-
-Example:
-
-```shell
-python main.py --mode 'Train' --n_gpu 0 --image_dir <CONCH FEATURE PATH> --ann_path <CAPTION PATH> --split_path ocr/dataset_csv/splits_0.csv --bank_path memory_short.pt --save_dir results/drgen --record_dir records/drgen
+python main.py --mode 'Train' --n_gpu <GPUs to be used> --image_dir <CONCH FEATURE PATH> --ann_path <CAPTION PATH> --split_path <PATH TO TRAIN/VAL/TEST SPLIT CSV> --bank_path <KNOWLEDGE BANK PATH> --save_dir <SAVING CKPT PATH>
 ```
 
 ### Testing model
@@ -52,18 +46,10 @@ python main.py --mode 'Train' --n_gpu 0 --image_dir <CONCH FEATURE PATH> --ann_p
 python main.py --mode 'Test' --n_gpu <GPUs to be used> --image_dir <CONCH FEATURE PATH> --ann_path <CAPTION PATH> --split_path <PATH TO TRAIN/VAL/TEST SPLIT CSV> --bank_path <KNOWLEDGE BANK PATH> --checkpoint_dir <PATH TO CKPT DIRECTORY> --save_dir <PATH TO SAVING RESULTS>
 ```
 
-Example:
-
-```shell
-python main.py --mode 'Test' --n_gpu 0 --image_dir <CONCH FEATURE PATH> --ann_path <CAPTION PATH> --split_path ocr/dataset_csv/splits_0.csv --bank_path memory_short.pt --checkpoint_dir results/drgen --save_dir results/drgen_test
-```
-
-The default retrieval hyperparameters used in the paper are `k=0.6`, `v=5`, and `m=80`. The model uses a 3-layer Transformer with 4 attention heads, a 512-dimensional embedding space, and beam search with a beam size of 3.
 
 ## Basic Environment
 
 - Linux
 - NVIDIA GPU (the experiments were conducted on an NVIDIA RTX 5000 Ada 32GB GPU)
-- CUDA-compatible PyTorch
-- Python 3.8
-- PyTorch, NumPy, pandas, Pillow, tqdm, einops, thop, and pycocoevalcap
+- CUDA
+- Python 3.10
