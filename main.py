@@ -33,6 +33,7 @@ def parse_agrs():
     parser.add_argument('--k', type=float, default=0.6, help='the ratio of selected top-k patches (0.4)')
     parser.add_argument('--v', type=int, default=5 ,help='the number of selected top-v knowledge features (3)')
     parser.add_argument('--m', type=int, default=80, help='the region size in the knowledge retrieval module') 
+    parser.add_argument('--lambda_gate', type=float, default=0.0, help='hyperparameter for gate loss.')
 
     # Data loader settings
     parser.add_argument('--dataset_name', type=str, default='TCGA', choices=['TCGA', ], help='the dataset to be used.')
