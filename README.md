@@ -5,6 +5,7 @@
 <details>
 <summary>
     <b>Think Global, Look Focal: Dual-Stream Retrieval-Augmented Pathology Report Generation for Whole Slide Images</b>.
+    <a href="https://link.springer.com/chapter/10.1007/978-3-032-38062-3_55" target="blank">[Link]</a>
     <br><em>Liang Xiong*, Yi Zhang*, HaoJie Song, QianYao Peng, ShaoGuo Cui</em></br>
 </summary>
 </details>
